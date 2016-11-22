@@ -1,0 +1,58 @@
+
+h1{
+
+    padding: 5px;
+    font:normal Verdana, Geneva, Sans-Serif;
+    word-wrap:break-word;
+    text-align:center;
+    border:3px solid #DF0101;
+    padding:15px;
+    margin:15px auto;
+    background-color:#DF0101;
+    background:-moz-linear-gradient(top, #B50D0D, #ED3D3D);
+    border-radius:10px;
+    color: #FFF;
+    box-shadow:#ED3D3D 5px 5px 10px;
+    text-shadow:#FFF 2px 2px 3px;
+}
+
+h2{
+    font:bold Verdana, Geneva, sans-serif;
+    margin:0;
+    padding:5px 0px 5px 0px;
+    color:#000;
+}
+#logo{
+
+}
+
+figure img{
+	max-width:120px;
+	padding:4px;
+    border-radius:20px;
+
+	width:90%;
+    border-top:1px;
+}
+
+#contSupText, #contInfText{
+	margin-top: auto;
+	padding: 5px;
+}
+
+.txt{
+	padding: 5px;
+}
+
+#textoSuperior, #textoInferior{
+	width: 20%;
+	padding: 5px;
+
+}
+
+#boton{
+padding: 5px;
+margin-left: 7%;
+
+
+}

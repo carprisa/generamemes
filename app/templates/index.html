@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Prueba Flask y Python</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/estilos.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+</head>
+<body>
+
+	<header>
+
+
+	    <h1>
+	    	<p>GENERADOR DE MEMES</p>		
+
+	    	<div class="navbar-header">
+	    	<a class="navbar-brand" href="/">
+	    		<figure id="logo"><img src="{{ url_for('static', filename='images/mainlogo.png')}}"></figure> 
+	    	</a>
+	    </div>
+	    </h1>
+	    <h2>
+	    	<p>¡¡Genera tu meme!!</p>
+
+	    </h2>
+
+
+
+	</header>
+
+</body>
+
+<section>
+
+	<form>
+
+		 <div class="form-group" id="contSupText">
+		    <label class="txt">Texto superior</label>
+		    <input type="text" class="form-control" id="textoSuperior" placeholder="Texto">
+  		</div>
+  		
+  		<div class="form-group" id="contInfText">
+    		<label class="txt">Texto inferior</label>
+    		<input type="text" class="form-control" id="textoInferior" placeholder="Texto">
+  		</div>
+	
+	</form>
+
+		<div id="boton">
+			<a href="/dashboard/">
+				<button id="btngenera" type="button" class="btn btn-success" aria-label="Left Align">
+					<span aria-hidden="true"></span>
+					<p>Generar meme</p>
+				</button>
+			</a>
+		</div>
+		
+</section>
+
+
+
+
+
+</html>
