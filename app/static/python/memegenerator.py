@@ -4,9 +4,12 @@ import PIL
 from PIL import ImageFont
 from PIL import Image
 from PIL import ImageDraw
+import os
+import glob
 
 import sys
 
+global nobmre
 
 def make_meme(topString, bottomString, filename):
 
@@ -47,7 +50,11 @@ def make_meme(topString, bottomString, filename):
 	draw.text(topTextPosition, topString, (255,255,255), font=font)
 	draw.text(bottomTextPosition, bottomString, (255,255,255), font=font)
 
-	img.save("temp.png")
+	global nombre #variable global para ppoder ir incrementandola
+	nombre = "app/static/tmp/" + str(nombre)
+	img.save(nombre, "JPEG")
+	nombre=nombre+1
+
 
 def get_upper(somedata):
 	'''

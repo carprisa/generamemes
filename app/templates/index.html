@@ -5,11 +5,18 @@
 
 <head>
 	<meta charset="utf-8">
+	<!-- los tres siguientes fuerzan al navegador a no tirar de cache -->
+	<!-- <meta http-equiv="Last-Modified" content="0"> -->
+	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+ 	<meta http-equiv="Pragma" content="no-cache">
 	<title>Prueba Flask y Python</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/estilos.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<!-- refresca los css y aplica cambios automaticamente -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/cssrefresh.js')}}"></script>
 
 </head>
 <body>
@@ -20,7 +27,7 @@
 	    <h1>
 	    	<p>GENERADOR DE MEMES</p>		
 
-	    	<div class="navbar-header">
+	    <div id="logodiv" class="navbar-header">
 	    	<a class="navbar-brand" href="/">
 	    		<figure id="logo"><img src="{{ url_for('static', filename='images/mainlogo.png')}}"></figure> 
 	    	</a>
@@ -33,38 +40,42 @@
 
 
 
+
 	</header>
 
-</body>
 
 <section>
 
-	<form>
-
-		 <div class="form-group" id="contSupText">
+	<form method="POST" action="/send">
+	
+		 <div id="contSupText">
 		    <label class="txt">Texto superior</label>
-		    <input type="text" class="form-control" id="textoSuperior" placeholder="Texto">
+		    <input type="text" autocomplete="off" value="" name="txtSup" class="form-control" id="textoSuperior" placeholder="Texto">
   		</div>
   		
-  		<div class="form-group" id="contInfText">
+  		<div id="contInfText">
     		<label class="txt">Texto inferior</label>
-    		<input type="text" class="form-control" id="textoInferior" placeholder="Texto">
+    		<input type="text" autocomplete="off" value="" name="txtInf" class="form-control" id="textoInferior" placeholder="Texto">
   		</div>
+		<div id="boton">
+				<button id="btngenera" type="submit" value="Enviar" class="btn btn-success" aria-label="Left Align">
+				<span aria-hidden="true"></span>
+					
+					<p>Genera Meme</p>
+				</button>
+		</div>
 	
 	</form>
 
-		<div id="boton">
-			<a href="/dashboard/">
-				<button id="btngenera" type="button" class="btn btn-success" aria-label="Left Align">
-					<span aria-hidden="true"></span>
-					<p>Generar meme</p>
-				</button>
-			</a>
-		</div>
-		
+	    	<a>
+	    		<figure ><img id="memediv" src="{{ url_for('static', filename='python/sap.jpg')}}"></figure> 
+	    	</a>
+
+
 </section>
 
 
+</body>
 
 
 

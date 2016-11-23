@@ -22,17 +22,30 @@ h2{
     padding:5px 0px 5px 0px;
     color:#000;
 }
-#logo{
+#memediv{
+    padding-top: 200px;
+    float: left;
+    width: 400px;
+    height: 250px;
+    padding:4px;
+    border-radius:20px;
 
+    width:90%;
+    border-top:1px;
 }
 
-figure img{
+
+img{
 	max-width:120px;
 	padding:4px;
     border-radius:20px;
 
 	width:90%;
     border-top:1px;
+}
+#meme_gen{
+    max-width: 450px;
+    max-height: 450px;
 }
 
 #contSupText, #contInfText{
