@@ -9,9 +9,10 @@ import glob
 
 import sys
 
-global nobmre
 
 def make_meme(topString, bottomString, filename):
+
+	contador = None
 
 	img = Image.open(filename)
 	imageSize = img.size
@@ -49,13 +50,9 @@ def make_meme(topString, bottomString, filename):
 
 	draw.text(topTextPosition, topString, (255,255,255), font=font)
 	draw.text(bottomTextPosition, bottomString, (255,255,255), font=font)
+	
+	img.save("app/static/tmp/tmp.png")
 
-	#global nombre #variable global para ppoder ir incrementandola
-	for contador in range(100):
-		contador=1
-		nombre = "app/static/tmp/" + str(contador)
-		img.save(nombre, "JPEG")
-		contador=contador+1
 
 
 def get_upper(somedata):

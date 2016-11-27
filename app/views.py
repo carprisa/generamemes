@@ -6,18 +6,25 @@ from static.python.memegenerator import make_meme
 from jinja2 import Template
 
 
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
 @app.route("/")
 def index():
 	return render_template("/index.html")
 
 @app.route("/send", methods=['POST'])
+
 def send():
+
 
 	txtSup = request.form["txtSup"]
 	txtInf = request.form["txtInf"]
 
 		# se necesita la ruta completa de la imagen. Ver como mejorar en el futuro por motivos de seguridad
     	make_meme(txtSup, txtInf, "/Users/carlosprieto/desarrollo/generamemes/app/static/python/sap.jpg")
+
 	
 	return render_template('/meme.html')
+	contador+=1
+
 
